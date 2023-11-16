@@ -1,7 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
 /**
  * bubble_sort - sorts by repeatedly swapping the adjacent
  * elements if they are in the wrong order
