@@ -34,19 +34,3 @@ void bubble_sort(int *array, size_t size)
 
 	}
 }
-/**
- * swap - swaps two pointers
- *
- * @x: pointer to be swaped
- * @y: pointer to be swaped
- *
- * Return: noting (void)
- */
-void swap(int *x, int *y)
-{
-	int temp;
-
-	temp = *x;
-	*x = *y;
-	*y = temp;
-}
