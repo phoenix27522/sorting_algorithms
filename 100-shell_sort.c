@@ -41,7 +41,7 @@ void shell_sort(int *array, size_t size)
 		{
 			for (i = j - gap; i < size; i -= gap)
 			{
-				if (i >= gap && array[i] > array[i + gap])
+				if (array[i] > array[i + gap])
 					swap(&array[i], &array[i + gap]);
 				else
 					break;
