@@ -33,6 +33,7 @@ void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
 
 /* ----------------------- lomuto algorithm ------------------*/
 int lomuto_partition(int *array, size_t size, int left, int right);
