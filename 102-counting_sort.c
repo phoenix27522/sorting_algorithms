@@ -19,29 +19,50 @@ int get_max(int *array, int size)
 
 	return (max);
 }
+
+/**
+ * counting_sort - Sort an array of integers in ascending order
+ *                 using the counting sort algorithm.
+ * @array: An array of integers.
+ * @size: The size of the array.
+ *
+ * Description: Prints the counting array after setting it up.
+ */
 void counting_sort(int *array, size_t size)
 {
-	int *count;
-	size_t i, j, max;
+	int *count, *sorted, max, i;
 
-	if (array == NULL || size <= 1)
+	if (array == NULL || size < 2)
+		return;
+
+	sorted = malloc(sizeof(int) * size);
+	if (sorted == NULL)
 		return;
 	max = get_max(array, size);
-	count = (int *)calloc(max + 1, sizeof(int));
+	count = malloc(sizeof(int) * (max + 1));
 	if (count == NULL)
+	{
+		free(sorted);
 		return;
-	for (i = 0; i < size; i++)
-		count[array[i]]++;
+	}
 
+	for (i = 0; i < (max + 1); i++)
+		count[i] = 0;
+	for (i = 0; i < (int)size; i++)
+		count[array[i]] += 1;
+	for (i = 0; i < (max + 1); i++)
+		count[i] += count[i - 1];
 	print_array(count, max + 1);
 
-	for (i = 0; i <= max; i++)
+	for (i = 0; i < (int)size; i++)
 	{
-		while (count[i] > 0)
-		{
-			array[j++] = i;
-			count[i]--;
-		}
+		sorted[count[array[i]] - 1] = array[i];
+		count[array[i]] -= 1;
 	}
+
+	for (i = 0; i < (int)size; i++)
+		array[i] = sorted[i];
+
+	free(sorted);
 	free(count);
 }
