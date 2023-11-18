@@ -51,3 +51,18 @@ implementing the best way to  solve some problem using algorithm
 	* Reduce the gap: After sorting elements with the initial gap, reduce the gap size.
 	* Repeat until the gap is 1
 	* In gap of 1,it is the same as insertion sort. It compares adjacent elements and swaps them if necessary until the entire array is sorted
+
+                                                                                                [reference]: https://www.geeksforgeeks.org/cocktail-sort/
+
+6 - Cocktail Sort : it is like bubble sort but Cocktail Sort traverses through a given array in both directions alternatively.
+		    Cocktail sort does not go through the unnecessary iteration making it efficient for large arrays.
+
+    In this algorithm,
+	* The first stage loops through the array from left to right, just like the Bubble Sort. During the loop,
+	  adjacent items are compared and if the value on the left is greater than the value on the right, then values are swapped.
+	  At the end of the first iteration, the largest number will reside at the end of the array.
+	* The second stage loops through the array in opposite direction- starting from the item just before the most recently sorted item,
+	  and moving back to the start of the array. Here also, adjacent items are compared and are swapped if required.
+
+                                                                                                [reference]: https://www.geeksforgeeks.org/cocktail-sort/
+
