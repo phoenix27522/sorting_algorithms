@@ -7,6 +7,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+
+/* ---- for bitonic sort ----- */
+#define UP 0
+#define DOWN 1
+
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -36,6 +41,12 @@ void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
+
+/* ------------------------------ batonic --------------------------------*/
+void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
+                char dir);
+void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char dir);
 
 /* ----------------------- lomuto algorithm ------------------*/
 int lomuto_partition(int *array, size_t size, int left, int right);
