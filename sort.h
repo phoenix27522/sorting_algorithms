@@ -45,7 +45,7 @@ void bitonic_sort(int *array, size_t size);
 
 /* ------------------------------ batonic --------------------------------*/
 void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
-                char dir);
+		char dir);
 void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char dir);
 
 /* ----------------------- lomuto algorithm ------------------*/
